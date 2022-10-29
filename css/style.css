@@ -1,0 +1,75 @@
+/* color palatte from coolers */
+/* https://coolors.co/palette/89e8e0-6bc7bf-52bbb2-45b4ae-166b67-1b4e4b-778583-a6b3b1 */
+
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #166b67;
+    font-family: 'Raleway', sans-serif;
+    /* color: whitesmoke; */
+    border: black solid 0px;
+}
+
+
+.hide {
+    display: none;
+}
+
+/* nav */
+nav {
+    background-color: #1b4e4b;    
+    border: #a6b3b1 inset 5px;
+    color: #89e8e0;
+}
+
+/* container */
+/* intro and content are in a column */
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    background-color: #1b4e4b;
+}
+
+/* intro */
+.intro {
+    height: 10vh;
+    background-color: #a6b3b1;
+    font-size: 14pt;
+    /* display: flex; */
+    /* align-items: center;
+    text-align: center; */
+    
+    
+}
+
+/* content */
+/* inside of content, problems and input are in a row */
+.content {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+    justify-content: space-evenly;
+}
+
+/* problems */
+.topics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70vw;
+    min-height: 20vh;
+    background-color: #6bc7bf;
+    color: black;
+}
+
+
+/* input */
+.notes {
+    width: 20vw;
+    min-height: 20vh;
+    background-color: #52bbb2;
+    color: black;
+}
+

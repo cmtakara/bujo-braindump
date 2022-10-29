@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:ital,wght@1,200&family=Raleway:wght@200;500;900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Daily Brain Dump</title>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Calendar</a>
+        <a href="#">Lists</a>
+    </nav>
+    <div class="intro">
+        Intro
+    </div>
+    <br />
+    <div class="content">
+        <div class="topics">
+
+            <form>
+                <div>
+                    <label for="date">Entry Date (default to today):</label>
+                    <input type="date" id='date'>
+                </div>
+
+                <label for="type">Choose the entry type:</label>
+                <select id="type" name="type">
+                    <option value="todo">To Do</option>
+                    <option value="idea">Idea</option>
+                    <option value="schedule">Schedule</option>
+                    <option value="list">Add to a List</option>
+                </select>
+
+                <div>
+                    <label for="add-to-calendar">Add to Calendar:</label>
+                    <input type="checkbox" id='add-to-calendar'>
+                </div>
+
+                <label for="category">Choose the category:</label>
+                <select id="category" name="category">
+                    <option value="home">Home</option>
+                    <option value="people">Family and Friends</option>
+                    <option value="per-scholas">Per Scholas</option>
+                    <option value="navarro">Navarro</option>
+                </select>
+
+                <div>
+                    <label for="sub-category">sub-category:</label>
+                    <input type="text" id='sub-category'>
+                </div>
+
+                <div>
+                    <label for="description">description</label>
+                    <textarea rows="2" cols="25" id="description"></textarea>
+                </div>
+
+                <div>
+                    <label for="delegate">Delegate:</label>
+                    <input type="checkbox" id='delegate'>
+                </div>
+                
+                <div id='submit-button'>
+                    <button onclick='bujoBraindump.addEvent(event)'>Submit</button>
+                </div>
+
+                <p id="no-description" class="hide"> You need a description to create an entry.  Add the information and submit again or 
+                    <button onclick="bujoBraindump.resetForm(event)">clear</button>
+                </p>
+                <br />
+                <br />
+                <br />
+                <h3>For later</h3>
+                <h4>choose a color for the category</h4>
+                <div>
+                    <label for="color">Pick a color:</label>
+                    <input type="color" id='color'>
+                </div>
+                <h4>Save the file over an existing file</h4>
+                <div>
+                    <label for="file-name">Where to save</label>
+                    <input type="file" id='file-name'>
+                </div>
+
+            </form>
+        </div>
+        <div class="notes">
+            <h3>Current List</h3>
+            <ul id="event-list">
+
+            </ul>
+            <button onclick="bujoBraindump.saveToFile(event)">Save</button>
+            <a download="entries.csv" href='#' id="save-file"></a>
+        </div>
+    </div>
+
+    <br />
+    <div class="content">
+        <div class="topics">
+            <h2> Other </h2>
+
+        </div>
+        <div class="notes">Notes 2</div>
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+
+</html>
